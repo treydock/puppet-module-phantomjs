@@ -9,6 +9,9 @@ class phantomjs (
     'RedHat': {
       ensure_packages(['bzip2', 'fontconfig'])
     }
+    'Debian': {
+      ensure_packages(['bzip2', 'libfontconfig1'])
+    }
     default: {
       # Do nothing
     }

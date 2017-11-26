@@ -1,14 +1,7 @@
 require 'spec_helper'
 
 describe 'phantomjs' do
-  on_supported_os({
-    :supported_os => [
-      {
-        "operatingsystem" => "RedHat",
-        "operatingsystemrelease" => ["6", "7"],
-      }
-    ]
-  }).each do |os, facts|
+  on_supported_os.each do |os, facts|
     context "on #{os}" do
       let(:facts) do
         facts.merge({
@@ -20,6 +13,9 @@ describe 'phantomjs' do
       when 'RedHat'
         bzip_package = 'bzip2'
         fontconfig_package = 'fontconfig'
+      when 'Debian'
+        bzip_package = 'bzip2'
+        fontconfig_package = 'libfontconfig1'
       end
 
       it { is_expected.to compile.with_all_deps }
