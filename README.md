@@ -3,7 +3,7 @@
 [![Puppet Forge](http://img.shields.io/puppetforge/v/treydock/phantomjs.svg)](https://forge.puppetlabs.com/treydock/phantomjs)
 [![Build Status](https://travis-ci.org/treydock/puppet-module-phantomjs.png)](https://travis-ci.org/treydock/puppet-module-phantomjs)
 
-####Table of Contents
+#### Table of Contents
 
 1. [Overview](#overview)
 2. [Usage - Configuration options](#usage)
