@@ -13,18 +13,6 @@ matrix:
     - rvm: 2.4.4
       sudo: required
       services: docker
-      env: BEAKER_set="centos-6" BEAKER_PUPPET_COLLECTION=puppet5
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="centos-6" BEAKER_PUPPET_COLLECTION=puppet6
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
       env: BEAKER_set="centos-7" BEAKER_PUPPET_COLLECTION=puppet5
       bundler_args:
       script: bundle exec rake beaker
@@ -37,18 +25,6 @@ matrix:
     - rvm: 2.4.4
       sudo: required
       services: docker
-      env: BEAKER_set="debian-8" BEAKER_PUPPET_COLLECTION=puppet5
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="debian-8" BEAKER_PUPPET_COLLECTION=puppet6
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
       env: BEAKER_set="debian-9" BEAKER_PUPPET_COLLECTION=puppet5
       bundler_args:
       script: bundle exec rake beaker
@@ -56,42 +32,6 @@ matrix:
       sudo: required
       services: docker
       env: BEAKER_set="debian-9" BEAKER_PUPPET_COLLECTION=puppet6
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-14.04" BEAKER_PUPPET_COLLECTION=puppet5
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-14.04" BEAKER_PUPPET_COLLECTION=puppet6
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-16.04" BEAKER_PUPPET_COLLECTION=puppet5
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-16.04" BEAKER_PUPPET_COLLECTION=puppet6
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-18.04" BEAKER_PUPPET_COLLECTION=puppet5
-      bundler_args:
-      script: bundle exec rake beaker
-    - rvm: 2.4.4
-      sudo: required
-      services: docker
-      env: BEAKER_set="ubuntu-18.04" BEAKER_PUPPET_COLLECTION=puppet6
       bundler_args:
       script: bundle exec rake beaker
 notifications:
