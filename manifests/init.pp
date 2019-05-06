@@ -1,4 +1,20 @@
-# See README.md for more details.
+# @summary Install and configure phantomjs
+#
+# @example Install PhantomJS 2.1.1 to /usr/local/bin/phantomjs
+#   include ::phantomjs
+#
+# @example Install specific version of PhantomJS
+#   class { 'phantomjs':
+#      version => '1.9.8',
+#    }
+#
+# @param version
+#   Version of PhantomJS to install.
+# @param source_url
+#   Optional URL for PhantomJS download.
+# @param path
+#   The path to phantomjs binary.
+#
 class phantomjs (
   String $version = '2.1.1',
   Optional[String] $source_url = undef,

@@ -30,27 +30,7 @@ Install specific version of PhantomJS
 
 ## Reference
 
-### Classes
-
-#### Public classes
-
-* `phantomjs`: Installs and configures phantomjs.
-
-### Parameters
-
-#### phantomjs
-
-##### `version`
-
-Version of PhantomJS to install. Default is `2.1.1`
-
-##### `source_url`
-
-Optional URL for PhantomJS download.
-
-##### `path`
-
-The path to phantomjs binary. Default is `/usr/local/bin/phantomjs`
+[http://treydock.github.io/puppet-module-phantomjs/](http://treydock.github.io/puppet-module-phantomjs/)
 
 ## Development
 
