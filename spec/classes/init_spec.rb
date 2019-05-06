@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'phantomjs' do
-  on_supported_os.each do |os, facts|
+  on_supported_os({facterversion: '2.5'}).each do |os, facts|
     context "on #{os}" do
       let(:facts) do
         facts.merge({
