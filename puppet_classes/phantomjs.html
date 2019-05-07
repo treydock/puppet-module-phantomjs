@@ -161,6 +161,24 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>package_dependencies</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>[&#39;bzip2&#39;,&#39;fontconfig&#39;]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of package dependencies</p>
+</div>
+      
+    </li>
+  
 </ul>
 
 
@@ -171,8 +189,6 @@
         <pre class="lines">
 
 
-18
-19
 20
 21
 22
@@ -205,32 +221,22 @@
 49
 50
 51
-52
-53
-54
-55
-56</pre>
+52</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 18</span>
+        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 20</span>
 
 class phantomjs (
   String $version = &#39;2.1.1&#39;,
   Optional[String] $source_url = undef,
   Stdlib::Absolutepath $path = &#39;/usr/local/bin/phantomjs&#39;,
+  Array $package_dependencies = [&#39;bzip2&#39;,&#39;fontconfig&#39;],
 ) {
 
-  case $::osfamily {
-    &#39;RedHat&#39;: {
-      ensure_packages([&#39;bzip2&#39;, &#39;fontconfig&#39;])
-    }
-    &#39;Debian&#39;: {
-      ensure_packages([&#39;bzip2&#39;, &#39;libfontconfig1&#39;])
-    }
-    default: {
-      # Do nothing
-    }
+  $package_dependencies_defaults = {
+    &#39;before&#39; =&gt; Archive[&#39;/tmp/phantomjs.tar.bz2&#39;]
   }
+  ensure_packages($package_dependencies, $package_dependencies_defaults)
 
   $source = pick($source_url, &quot;https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${version}-linux-x86_64.tar.bz2&quot;)
 
