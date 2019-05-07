@@ -19,19 +19,13 @@ class phantomjs (
   String $version = '2.1.1',
   Optional[String] $source_url = undef,
   Stdlib::Absolutepath $path = '/usr/local/bin/phantomjs',
+  Array $package_dependencies = ['bzip2','fontconfig'],
 ) {
 
-  case $::osfamily {
-    'RedHat': {
-      ensure_packages(['bzip2', 'fontconfig'])
-    }
-    'Debian': {
-      ensure_packages(['bzip2', 'libfontconfig1'])
-    }
-    default: {
-      # Do nothing
-    }
+  $package_dependencies_defaults = {
+    'before' => Archive['/tmp/phantomjs.tar.bz2']
   }
+  ensure_packages($package_dependencies, $package_dependencies_defaults)
 
   $source = pick($source_url, "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${version}-linux-x86_64.tar.bz2")
 

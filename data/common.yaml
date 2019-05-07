@@ -1,0 +1,3 @@
+---
+phantomjs::version: '2.1.1'
+phantomjs::path: /usr/local/bin/phantomjs

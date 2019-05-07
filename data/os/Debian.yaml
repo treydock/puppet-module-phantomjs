@@ -1,0 +1,4 @@
+---
+phantomjs::package_dependencies:
+  - bzip2
+  - libfontconfig1
