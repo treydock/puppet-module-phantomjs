@@ -1,10 +1,10 @@
 {
   "name": "treydock-phantomjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "treydock",
   "summary": "phantomjs Puppet module",
   "license": "Apache-2.0",
-  "source": "git://github.com/treydock/puppet-module-phantomjs.git",
+  "source": "https://github.com/treydock/puppet-module-phantomjs",
   "project_page": "https://github.com/treydock/puppet-module-phantomjs",
   "issues_url": "https://github.com/treydock/puppet-module-phantomjs/issues",
   "dependencies": [

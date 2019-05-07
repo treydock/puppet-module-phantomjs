@@ -52,3 +52,14 @@ Run unit tests
 If you have Vagrant >= 1.2.0 installed you can run system tests
 
     bundle exec rake beaker
+
+## Release Process
+
+1. Update metadata.json version
+1. Generate REFERENCE.md: `pdk bundle exec rake strings:generate:reference`
+1. Update CHANGELOG.md: `pdk bundle exec rake changelog`
+1. Commit changes, eg `git commit -a -m "Release 0.1.0"`
+1. Tag, eg: `pdk bundle exec rake module:tag`
+1. Update GitHub pages: `pdk bundle exec rake strings:gh_pages:update`
+1. Push to GitHub: `git push --tags origin master`
+1. Build: `pdk build`
