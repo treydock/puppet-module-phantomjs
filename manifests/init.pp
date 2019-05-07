@@ -14,6 +14,8 @@
 #   Optional URL for PhantomJS download.
 # @param path
 #   The path to phantomjs binary.
+# @param package_dependencies
+#   Array of package dependencies
 #
 class phantomjs (
   String $version = '2.1.1',

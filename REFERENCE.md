@@ -57,3 +57,11 @@ The path to phantomjs binary.
 
 Default value: '/usr/local/bin/phantomjs'
 
+##### `package_dependencies`
+
+Data type: `Array`
+
+Array of package dependencies
+
+Default value: ['bzip2','fontconfig']
+
