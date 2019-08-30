@@ -50,4 +50,13 @@ branches:
     - master
     - /^v\d/
 notifications:
-  email: false
+  email: treydock@gmail.com
+deploy:
+  provider: puppetforge
+  user: treydock
+  password:
+    secure: "TdQ3ibI26WobhDOdR3p434v1JnSa5zQhOT/qGU0/Z+48inoNwUy8KDsraN2vmpsUV9puzu23GkBjs99r19hLkeG36YGWFsUEYGpaLqVbCEmNMXxnHqmsH59hTkewWy6rHCUNME36UMiliwTpHxQkqoGSF3abg9iqXoWjdE/zx3oBbuZOuoLmXgeSRzAt+5FdfWety37OZcqbTAfRtaQXKkNv2aNQ2zPHGgg9lCdXEAAkpBZLd5N7iqO10M8Ug1yGrxmIXqevmvZhV4b86hPphY48yFBAF4hD+e/yvkPfQcy7yM90sbJgvCa4x9PXn8wcGztH42KMNCs5BGk1m2nIL1lMTjn1Ys9Ig9R5R1fsGj2B8T/7YAHudhGV2GCFQPnvH9DqGJGz2ag2H91Gp24J2eCmgxg8D5sfToon1RK67VhdBPMhBm/Z7wr/F/v8TE8GXjP3oQb0f/uvUw7531yDx2gOypzLXj6KRx7xURNd0ii5h178BUIkQ++MkRUh/S+ATEk6WJs4CaVVh0EQ4a+6UyJcGUcdIzaqcFYzIOhF+Dma9K+BsKaT7h3BKnd9wymrHpRJP8KuCS7D4bv9adXjwCeXix3+zzQgq97aXgQz1hd88AK5xnpHQ+gWZ1JYOxtV12TILJEGY4oK34pHhScluMutaCliy/BIml/YIVQtZ+M="
+  on:
+    tags: true
+    all_branches: true
+    condition: "$DEPLOY_TO_FORGE = yes"
