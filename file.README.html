@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -128,27 +128,6 @@ href="http://treydock.github.io/puppet-module-phantomjs/">treydock.github.io/pup
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_beaker'>beaker</span>
 </code></pre>
-
-<h2 id="label-Release+Process">Release Process</h2>
-<ol><li>
-<p>Update metadata.json version</p>
-</li><li>
-<p>Generate REFERENCE.md: <code>pdk bundle exec rake
-strings:generate:reference</code></p>
-</li><li>
-<p>Update CHANGELOG.md: <code>pdk bundle exec rake changelog</code></p>
-</li><li>
-<p>Commit changes, eg <code>git commit -a -m &quot;Release 0.1.0&quot;</code></p>
-</li><li>
-<p>Tag, eg: <code>pdk bundle exec rake module:tag</code></p>
-</li><li>
-<p>Update GitHub pages: <code>pdk bundle exec rake
-strings:gh_pages:update</code></p>
-</li><li>
-<p>Push to GitHub: <code>git push --tags origin master</code></p>
-</li><li>
-<p>Build: <code>pdk build</code></p>
-</li></ol>
 </div></div>
 
       <div id="footer">
